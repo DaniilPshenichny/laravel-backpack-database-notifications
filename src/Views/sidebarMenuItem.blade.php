@@ -51,15 +51,9 @@ $unreadNotificationsCount = backpack_user()->unreadNotifications()->count();
 							}
 
 							new Noty({
-								type: type,
 								text: message,
 								timeout: 10000,
-								closeWith: ['button'],
-								buttons: [
-									Noty.button('Прочитать все сообщения', 'ml-2 btn btn-default btn-sm', function () {
-										window.location = '{{backpack_url('notification')}}';
-									}, {id: 'button1', 'data-status': 'ok'})
-								]
+								closeWith: ['button']
 							}).show();
 						}
 						@endif
