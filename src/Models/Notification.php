@@ -44,7 +44,7 @@ class Notification extends Model
     public function dismissAllButton($crud)
     {
         if (backpack_user()->unreadNotifications()->count()) {
-            return '<a href="'.route('crud.notification.dismissall').'" class="btn btn-default ladda-button">Dismiss All</a>';
+            return '<a href="'.route('crud.notification.dismissall').'" class="btn btn-default ladda-button">Прочитать все</a>';
         }
     }
 
@@ -54,7 +54,7 @@ class Notification extends Model
             return '';
         }
 
-        return '<a href="'.route('crud.notification.dismiss', ['notification_id' => $this->id]).'" class="btn btn-xs btn-default ladda-button">Dismiss</a>';
+        return '<a href="'.route('crud.notification.dismiss', ['notification_id' => $this->id]).'" class="btn btn-xs btn-default ladda-button">Прочитать</a>';
     }
 
     public function actionButton()
