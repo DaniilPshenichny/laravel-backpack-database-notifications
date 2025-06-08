@@ -64,7 +64,7 @@ class NotificationCrudController extends CrudController
                 [
                     'type' => 'simple',
                     'name' => 'show_dismissed',
-                    'label' => 'Show Dismissed',
+                    'label' => 'Показать прочитанные',
                 ],
                 false,
                 function () {
