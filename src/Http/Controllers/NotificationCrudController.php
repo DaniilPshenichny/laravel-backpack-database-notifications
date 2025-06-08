@@ -30,7 +30,7 @@ class NotificationCrudController extends CrudController
     {
         $this->crud->setModel(config('backpack.databasenotifications.notification_model'));
         $this->crud->setRoute(config('backpack.base.route_prefix').'/notification');
-        $this->crud->setEntityNameStrings('notification', 'notifications');
+        $this->crud->setEntityNameStrings('сообщение', 'сообщения');
 
         $this->crud->addClause('orderBy', 'created_at', 'desc');
 
