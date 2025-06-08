@@ -17,6 +17,12 @@ $unreadNotificationsCount = backpack_user()->unreadNotifications()->count();
 	.unreadnotificationscount {
 		font-size: 60% !important;
 	}
+	.badge-sm {
+    --tblr-badge-font-size: 0.71428571em;
+    --tblr-badge-icon-size: 1em;
+    --tblr-badge-padding-y: 2px;
+    --tblr-badge-padding-x: 0.25rem;
+}
 </style>
 @endpush
 
