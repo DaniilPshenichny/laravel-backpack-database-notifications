@@ -60,7 +60,7 @@ $unreadNotificationsCount = backpack_user()->unreadNotifications()->count();
 						setTimeout(fetchUnreadCount, 1000);
 					});
 			}
-			setTimeout(fetchUnreadCount, 2000)
+			setTimeout(fetchUnreadCount, 10000)
 		</script>
 	@endpush
 @endif
