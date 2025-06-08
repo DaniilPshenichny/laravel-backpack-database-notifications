@@ -7,6 +7,7 @@ $unreadNotificationsCount = backpack_user()->unreadNotifications()->count();
 		<small
 		class="unreadnotificationscount badge badge-pill badge-sm badge-secondary pull-right {{($unreadNotificationsCount)? 'bg-primary' : 'bg-secondary'}}"
 		data-toggle="tooltip"
+		style="--tblr-badge-font-size: 0.71428571em;--tblr-badge-icon-size: 1em;--tblr-badge-padding-y: 2px;--tblr-badge-padding-x: 0.25rem;"
 		title="{{ $unreadNotificationsCount }} непрочитанных сообщений"
 		>{{ $unreadNotificationsCount }}</small>
 	</i>
