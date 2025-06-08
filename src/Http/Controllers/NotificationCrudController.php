@@ -77,7 +77,7 @@ class NotificationCrudController extends CrudController
                     [
                         'type' => 'simple',
                         'name' => 'show_all',
-                        'label' => 'Show notifications for all users (admin only)',
+                        'label' => 'Показать все сообщения (admin)',
                     ],
                     false,
                     function () {
@@ -89,14 +89,14 @@ class NotificationCrudController extends CrudController
         // columns
 
         $this->crud->addColumn([
-            'label' => 'Date',
+            'label' => 'Дата',
             'type' => 'datetime',
             'name' => 'created_at',
         ]);
 
         $this->crud->addColumn([
             'name' => 'message',
-            'label' => 'Message',
+            'label' => 'Сообщение',
             'type' => 'custom_html',
             'priority' => -1,
             'value' => function ($entry) {
@@ -140,7 +140,7 @@ class NotificationCrudController extends CrudController
     {
         backpack_user()->unreadNotifications->markAsRead();
 
-        \Alert::success('All notifications dismissed')->flash();
+        \Alert::success('Все сообщения прочитаны')->flash();
 
         return redirect()->back();
     }
@@ -153,7 +153,7 @@ class NotificationCrudController extends CrudController
         $notification->read_at = Carbon::now();
         $notification->save();
 
-        \Alert::success('Notification dismissed')->flash();
+        \Alert::success('Сообщение прочитано')->flash();
 
         return redirect()->back();
     }
